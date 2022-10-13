@@ -8,5 +8,6 @@ router
     .get("/books/:id", BookController.getBookById)
     .post("/books", BookController.registerBook)
     .put("/books/:id", BookController.updateBook)
+    .delete("/books/:id", BookController.removeBook)
 
 export default router
