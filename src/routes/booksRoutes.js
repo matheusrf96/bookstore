@@ -5,5 +5,6 @@ const router = express.Router()
 
 router
     .get("/books", BookController.getBooks)
+    .post("/books", BookController.registerBook)
 
 export default router
