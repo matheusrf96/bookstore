@@ -25,6 +25,14 @@ class BookController {
             })
     }
 
+    static getBookByPublisher = (req, res) => {
+        const publishingCompany = req.query.publishing
+
+        books.find({'publishing': publishingCompany }, {}, (_, book) => {
+            res.status(200).send(book)
+        })
+    }
+
     static registerBook = (req, res) => {
         let book = new books(req.body)
 
